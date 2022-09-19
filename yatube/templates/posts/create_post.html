@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %} Новый пост {% endblock title %}
+{% block content %}
+<div class="container py-5">
+  {% if is_edit %}
+  <h3><center>Редактировать запись</center></h3>
+{% else %}
+  <h3><center>Добавить запись</center></h3>
+{% endif %}
+</div>
+<div class="card-header">       
+  Новый пост             
+</div>
+<div class="card-body">        
+  <form method="post"> {% csrf_token %} {{form.as_p}}
+      {% if is_edit %}
+      <button type="submit" class="btn btn-primary">
+        Сохранить
+      {% else %}
+      <button type="submit" class="btn btn-danger">
+        Добавить
+      {% endif %}               
+    </button> 
+</div>
+{% endblock content%}

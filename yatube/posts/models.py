@@ -21,10 +21,6 @@ class Group(models.Model):
 
 
 class Post(models.Model):
-
-    def __str__(self) -> str:
-        return self.text
-
     text = models.TextField(
         verbose_name='Содержание'
     )
@@ -46,3 +42,9 @@ class Post(models.Model):
         related_name='posts',
         verbose_name='Тематическая группа'
     )
+
+    class Meta:
+        ordering = ['-pub_date']
+
+    def __str__(self) -> str:
+        return self.text

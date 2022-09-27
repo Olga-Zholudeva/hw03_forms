@@ -8,18 +8,27 @@
   <h3><center>Добавить запись</center></h3>
 {% endif %}
 </div>
-<div class="card-header">       
-  Новый пост             
-</div>
-<div class="card-body">        
-  <form method="post"> {% csrf_token %} {{form.as_p}}
-      {% if is_edit %}
-      <button type="submit" class="btn btn-primary">
-        Сохранить
-      {% else %}
-      <button type="submit" class="btn btn-danger">
-        Добавить
-      {% endif %}               
-    </button> 
+<div class="container py-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 p-5">
+      <div class="card">
+        <div class="card-header">       
+          Новый пост             
+        </div>       
+        <form method="post"> {% csrf_token %} {{form.as_p}}
+          {% if is_edit %}
+          <button type="submit" class="btn btn-primary">
+            Сохранить
+            {% else %}
+            <button type="submit" class="btn btn-danger">
+            Добавить
+            {% endif %}               
+          </button>
+        </form> 
+        <div class="d-flex justify-content-end">
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 {% endblock content%}

@@ -1,7 +1,5 @@
 # backend_community_homework
 
-# backend_community_homework
-
 ## Добавляем новые опции в [социальную сеть Yatube](https://github.com/Olga-Zholudeva/yatube_project)
 
 ## Суть проекта:

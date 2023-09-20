@@ -1,3 +1,46 @@
 # backend_community_homework
 
-[![CI](https://github.com/yandex-praktikum/hw03_forms/actions/workflows/python-app.yml/badge.svg?branch=master)](https://github.com/yandex-praktikum/hw03_forms/actions/workflows/python-app.yml)
+# backend_community_homework
+
+## Добавляем новые опции в [социальную сеть Yatube](https://github.com/Olga-Zholudeva/yatube_project)
+
+## Суть проекта:
+
+- Настроен эмулятор отправки писем; отправленные письма сохраняются в виде текстовых файлов
+- Настроена отправка письма при восстановлении пароля 
+- Добавлена возможность фильтрации, позволяющая добавлять CSS-класс к тегу шаблона
+- Создано и подключено приложение core
+- К каждому посту выведен текущий год
+- Добавлены страницы с информацией об авторе и технологии, ссылки на них размещены в блоке с навигацией по сайту
+- Добавлена страница для регистрации пользователей
+- Добавлена страница пользователя, на которой отображаются посты пользователя
+- Добавлена отдельная страница пост
+- Подключен паджинатор, он выводит по десять постов на страницы:
+    - главная
+    - страница профайла
+    - страница группы
+- Добавлена навигация по разделам
+
+### Технологии
+- Python 3.7
+- Django 2.2.19
+
+### Запуск проекта:
+
+- Клонируем репозиторий: **git clone [hw03_forms](https://github.com/Olga-Zholudeva/hw03_forms)**
+- Cоздаем и активировируем виртуальное окружение: **python3 -m venv env source env/bin/activate**
+- Устанавливаем зависимости из файла requirements.txt: **pip install -r requirements.txt**
+- Переходим в папку yatube: **cd yatube**
+- Применяем миграции: **python manage.py makemigrations**
+- Создаем супер пользователя: **python manage.py createsuperuser**
+- Применяем статику: **python manage.py collectstatic**
+- В папку с проектом, где файл settings.py добавляем файл .env куда прописываем наши параметры:
+  - SECRET_KEY='Ваш секретный ключ'
+  - ALLOWED_HOSTS='127.0.0.1, localhost'
+  - DEBUG=True
+- Запускаем проект на локальном устройстве: **python3 manage.py runserver**
+
+### Проект выполнила:
+
+**Ольга Жолудева**
+
